@@ -52,8 +52,9 @@ function showSingLyrics(artistName, artistTitle) {
 }
 
 // play audio lyrics
+const audioSrc = document.getElementById('audioSrc);
 function playAudio(link) {
-  musicPlay.src = link;
+  audioSrc.src = link;
   musicPlay.style.display = "block";
-  musicPlay.play();
+  audioSrc.play();
 }
