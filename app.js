@@ -28,9 +28,9 @@ function showLyricsDOM(lyric) {
       <h3 class="lyrics-name">${lyric.title}</h3>
       <p class="author lead">Album by <span>${lyric.album.title}</span></p>
     </div>
-    <div class="col-md-4 text-md-right text-center d-flex">      
+    <div class="col-md-4 text-md-right text-center">      
       <button onclick="showSingLyrics('${lyric.artist.name}', '${lyric.title}')" class="btn btn-sm btn-success" data-toggle="modal" data-target="#exampleModal">Get Lyrics</button>
-      <button onclick="playAudio('${lyric.preview}')" class="btn btn-info btn-sm" >Play</button>
+ 
     </div>
   `;
 
@@ -49,11 +49,4 @@ function showSingLyrics(artistName, artistTitle) {
       }
     });
   document.getElementById("modalTitle").innerText = artistTitle;
-}
-
-// play audio lyrics
-function playAudio(link) {
-  musicPlay.src = link;
-  musicPlay.style.display = "block";
-  musicPlay.play();
 }
